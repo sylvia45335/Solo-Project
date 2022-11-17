@@ -7,10 +7,18 @@ body {
     background-color: rgb(168, 192, 243);
 }
 
+.logo {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 4em;
+}
+
 .App-title {
     text-align: center;
     font-family: "Zilla Slab", 'Times New Roman', Times, serif;
-    font-size: 4em;
+    font-size: 5em;
+    margin-top: 0;
 }
 
 .movieAndShow {
@@ -31,6 +39,7 @@ input[type=text], select {
     border: none;
     height: 2em;
     border-radius: 0.22em;
+    font-family: "M PLUS 1p", Times, serif;
 }
 
 input[type=text]:focus, select:focus {

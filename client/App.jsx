@@ -9,7 +9,7 @@ class App extends Component {
         return (
             <div className="App">
                 <header className="App-header">
-                    {/* maybe add logo here */}
+                    <img src="https://img.freepik.com/free-vector/cute-panda-playing-laptop-cartoon-vector-icon-illustration-animal-technology-icon-isolated_138676-5387.jpg?w=2000" alt="Logo" width="100px" className="logo" />
                     <h1 className="App-title">Watch List</h1>
                 </header>
                 <div className="movieAndShow">

@@ -28,14 +28,6 @@ class ShowList extends Component {
             })
     }
 
-    // delClick(event) {
-    //     event.preventDefault();
-
-    //     fetch('http://localhost:3000/api/show', { method: 'DELETE' })
-    //         .then(() => {
-    //             this.setState({ titles: })
-    //         })
-    // }
     render() {
         //forloop for each item here 
         //need showitem in list form <li>
