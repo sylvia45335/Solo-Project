@@ -42,7 +42,7 @@ class MovieList extends Component {
         const list = [];
 
         for(let i = 0; i <this.state.titles.length; i++) {
-            list.push(<MovieItem title={this.state.titles[i]}  key={i} className="movieTitle"/>)
+            list.push(<MovieItem title={this.state.titles[i]} key={i} className="movieTitle"/>)
         }
         return(
             <div className="movieList">

@@ -16,7 +16,7 @@ module.exports = {
             publicPath: '/'
         },
         proxy: {
-            //this calls database at 'api' as told by Jay
+            //this calls database at 'api'
             '/api': 'http://localhost:3000'
         }
     },
@@ -37,6 +37,13 @@ module.exports = {
                         presets: ['@babel/preset-env', '@babel/preset-react']
                     }
                 }
+            },
+            {
+                test: /\.css$/,
+                use: [
+                    'style-loader',
+                    'css-loader'
+                ]
             }
         ]
     },

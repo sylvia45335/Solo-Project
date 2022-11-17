@@ -8,9 +8,11 @@ class Movie extends Component {
     render() {
         return (
             <div className='movieComponent'>
-                <h1>Movies</h1>
-                <MovieInput />
-                <MovieList />
+                <h1 className='movie'>Movies</h1>
+                <div className="movieBox">
+                    <MovieInput />
+                    <MovieList />
+                </div>
             </div>
         );
     }

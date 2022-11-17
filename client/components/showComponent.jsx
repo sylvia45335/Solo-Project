@@ -8,9 +8,11 @@ class Show extends Component {
     render() {
         return (
             <div className='showComponent'>
-                <h1>Shows</h1>
-                <ShowInput />
-                <ShowList />
+                <h1 className='show'>Shows</h1>
+                <div className="showBox">
+                    <ShowInput />
+                    <ShowList />
+                </div>
             </div>
         );
     }
