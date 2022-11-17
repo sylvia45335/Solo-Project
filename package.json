@@ -21,10 +21,12 @@
     "mongodb-shell": "^1.0.1",
     "mongoose": "^6.7.2",
     "node-fetch": "^3.3.0",
+    "node-polyfill-webpack-plugin": "^2.0.1",
     "path": "^0.12.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.4.3"
+    "react-router-dom": "^6.4.3",
+    "webpack-node-externals": "^3.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.2",
