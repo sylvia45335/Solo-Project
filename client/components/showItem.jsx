@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
-class MovieItem extends Component {
+class ShowItem extends Component {
     render() {
         return(
-            <div className="movieItem">
+            <div className="showItem">
                 <p>{this.props.title}</p>
                 <button className="delButton" onClick={this.props.delClick}>Delete</button>
             </div>
@@ -11,4 +11,4 @@ class MovieItem extends Component {
     }
 }
 
-export default MovieItem;
+export default ShowItem;

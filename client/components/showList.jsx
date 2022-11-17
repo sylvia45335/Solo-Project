@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import MovieItem from './movieItem.jsx';
+import ShowItem from './showItem.jsx';
 
-class MovieList extends Component {
+class ShowList extends Component {
     constructor (props) {
         super(props);
         this.state = {
@@ -10,10 +10,10 @@ class MovieList extends Component {
     }
     //componentDidMount here??
     //fetch req to database 
-    //prop drill it down to movieItem
+    //prop drill it down to showItem
     //update state here 
     componentWillMount() {
-        fetch('http://localhost:3000/api/movie')
+        fetch('http://localhost:3000/api/show')
             .then ((res) => res.json())
             .then ((data) => {
                 //arr of obj
@@ -31,25 +31,25 @@ class MovieList extends Component {
     // delClick(event) {
     //     event.preventDefault();
 
-    //     fetch('http://localhost:3000/api/movie', { method: 'DELETE' })
+    //     fetch('http://localhost:3000/api/show', { method: 'DELETE' })
     //         .then(() => {
     //             this.setState({ titles: })
     //         })
     // }
     render() {
         //forloop for each item here 
-        //need movieitem in list form <li>
+        //need showitem in list form <li>
         const list = [];
 
         for(let i = 0; i <this.state.titles.length; i++) {
-            list.push(<MovieItem title={this.state.titles[i]}  key={i} className="movieTitle"/>)
+            list.push(<ShowItem title={this.state.titles[i]} key={i} className="showTitle"/>)
         }
         return(
-            <div className="movieList">
+            <div className="showList">
                 {list}
             </div>
         );
     }
 }
 
-export default MovieList;
+export default ShowList;

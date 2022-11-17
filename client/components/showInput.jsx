@@ -1,13 +1,13 @@
 import React, { Component, useState } from 'react';
 import axios from 'axios';
 
-function MovieInput() {
+function ShowInput() {
     const [input, setInput] = useState({
         name: ''
     })
     //do i need to change the state of this??
     //when something is inputted i want it to send to DB
-    //movieList should be updated 
+    //showList should be updated 
     //post request in componentWillUpdate
     function handleChange(event) {
         const {name, value} = event.target;
@@ -30,7 +30,7 @@ function MovieInput() {
             })
         }
         
-        fetch('http://localhost:3000/api/movie', obj)
+        fetch('http://localhost:3000/api/show', obj)
             .then ((res) => res.json())
             .then((data) => {
                 console.log(data);
@@ -38,19 +38,19 @@ function MovieInput() {
     }
 
     return(
-        <div className="movieAdd">
+        <div className="showAdd">
              <form>
-                <input className="movieInput" 
+                <input className="showInput" 
                         name='name' 
                         value={input.title} 
                         type="text" 
-                        placeholder='Movie title ...' 
+                        placeholder='Show title ...' 
                         onChange={handleChange}/>
-                <input className="movieButton" type="submit" value="+" onClick={handleClick}/>
+                <input className="showButton" type="submit" value="+" onClick={handleClick}/>
             </form>
         </div>
      );
     
 }
 
-export default MovieInput;
+export default ShowInput;

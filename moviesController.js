@@ -4,8 +4,7 @@ const moviesController = {};
 
 moviesController.newMovie = async (req, res, next) => {
     try {
-        //request isn't coming in
-        console.log(req.body); //undefined
+        console.log(req.body);
         const { name } = req.body;
 
         const result = await Movie.create({
@@ -87,7 +86,7 @@ moviesController.newShow = async (req, res, next) => {
 
 moviesController.getShow = async (req, res, next) => {
     try {
-        const list = await db.Show.find({});
+        const list = await Show.find({});
         res.locals.show = list;
         return next();
     } catch (err) {
