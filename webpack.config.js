@@ -2,15 +2,15 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 
 module.exports = {
-    mode: 'development',
     entry: './client/index.js',
     output : {
-        path: path.resolve(__dirname, 'build'),
+        path: path.join(__dirname, '/build'),
         filename: 'bundle.js',
     },
     devServer: {
         host: 'localhost',
         port: 8080,
+        hot: true,
         static: {
             directory: path.join(__dirname, 'build'),
             publicPath: '/'
@@ -29,8 +29,8 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.jsx?/,
-                exclude: /(node_modules)/,
+                test: /.js$/,
+                exclude: /node_modules/,
                 use: {
                     loader: 'babel-loader',
                     options: {

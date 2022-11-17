@@ -12,15 +12,19 @@ mongoose.connect(MONGO_URI, {
 
 const Schema = mongoose.Schema;
 
-const listSchema = new Schema({
+const movieSchema = new Schema({
+    name: {type: String, required: true}
+});
+const showSchema = new Schema({
     name: {type: String, required: true}
 });
 
 
-const Movie = mongoose.model('movie', listSchema);
-const Show = mongoose.model('show', listSchema);
+const Movie = mongoose.model('Movie', movieSchema);
+const Show = mongoose.model('Show', showSchema);
 
 module.exports = {
     Movie,
     Show
 };
+

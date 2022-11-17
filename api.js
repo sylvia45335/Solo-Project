@@ -1,5 +1,5 @@
 const express = require('express');
-const moviesController = require('./moviesController');
+const moviesController = require('./moviesController.js');
 const router = express.Router();
 
 //routers go here
@@ -17,15 +17,27 @@ router.get('/show', moviesController.getShow, (req, res) => {
 //POST request client sends server name of movie or show
 //movie
 router.post('/movie', moviesController.newMovie, (req, res) => {
-    return res.status(200).send('New movie added');
+    return res.status(200).json(res.locals.movie);
 })
 
 //show
 router.post('/show', moviesController.newShow, (req, res) => {
-    return res.status(200).send('shows made');
+    return res.status(200).json(res.locals.show);
 })
-//PUT request updates changes being made
 
 //DELETE to delete if they don't want the show there anymore
+//movie
+router.delete('/movie', moviesController.deleteMovie, (req, res) => {
+    return res.status(200).json(res.locals.result);
+})
+
+router.delete('/show', moviesController.deleteShow, (req, res) => {
+    return res.status(200).json(res.locals.result);
+})
+
+//EXTENSION
+//PUT request updates changes being made
+
+
 
 module.exports = router;
